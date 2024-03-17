@@ -6,7 +6,9 @@ import Footer from '../components/Footer.astro';
 ---
 
 <Layout title="Pinturillo | Inicio">
-	<div id="background"></div>
+	<div id="background">
+  </div>
+  
     <div id="mainLayout">
       <div class="nextCenter">
         <div id="content">
@@ -50,9 +52,17 @@ import Footer from '../components/Footer.astro';
         </div>
       </div>
     </div>
+    
 </Layout>
 
 <style>
+
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
 
 h3 {
   font-family: NunitoBlack;
@@ -123,8 +133,8 @@ textarea:focus {
 }
 
 .selectAvatar {
-  width: 54px;
-  height: 54px;
+  width: 44px;
+  height: 44px;
   position: absolute;
   right: -17px;
   top: -10px;
@@ -466,6 +476,8 @@ textarea:focus {
   -moz-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
+  margin: auto; /* Centrar en la pantalla */
+  position: relative;
 }
 #screens,
 #screens > div {
@@ -564,7 +576,7 @@ textarea:focus {
   flex: 1;
 }
 
-@media screen and (max-height: 809px),
+@media screen and (max-height: 1058px),
   screen and (min-width: 641px) and (max-width: 1279px) {
   .btBlueBig,
   .btYellowBig {
@@ -577,8 +589,8 @@ textarea:focus {
   }
   
   #screens {
-    width: 902px;
-    height: 612px;
+    width: 100%;
+    height: auto;
   }
 
   .home > div:not(.or) {
@@ -610,6 +622,8 @@ textarea:focus {
   .home .anonymus .containerForm {
     margin: 15px 0 0;
   }
+  
+  
 }
 
 </style>
