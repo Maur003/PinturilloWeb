@@ -1,15 +1,19 @@
 ---
 import {Separator} from '~/components/ui/Separator/Separator.tsx'
+
+import Header from '~/components/Header.tsx'
 import Layout from '~/layouts/Layout.astro'
 import Social from '~/components/Github.tsx'
-import Developed from "~/components/Developed.tsx";
+import Footer from "~/components/Footer.tsx";
 ---
 <Layout>
   <main class="container p-3 mx-auto max-w-screen-sm min-h-dvh">
     <Separator className="my-8" />
+    <Header client:idle />
+    <Separator className="my-8" />
     <Social client:idle />
     <Separator className="my-8" />
-    <Developed />
+    <Footer />
   </main>
 </Layout>
 
