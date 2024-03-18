@@ -1,12 +1,21 @@
 ---
+interface Props {
+  titleBluebt: string;
+  titleYellowbt: string;
+}
 
+const { titleBluebt, titleYellowbt } = Astro.props;
 ---
 
 <div class="actions">
-  <button class="btBlueBig ic-rooms"> <strong>MESAS</strong></button>
-  <a href="/prueba">
+  <a href="/tables">
+    <button class="btBlueBig ic-rooms">
+      <strong>{titleBluebt}</strong>
+    </button>
+  </a>
+  <a href="/board">
     <button class="btYellowBig ic-playHome">
-      <strong>JUGAR!</strong>
+      <strong>{titleYellowbt}</strong>
     </button>
   </a>
 </div>

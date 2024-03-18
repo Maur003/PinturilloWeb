@@ -1,0 +1,55 @@
+---
+---
+<div id="screenRoom" class="common blur">
+  <div class="ctt">
+    <div class="content">
+      <div id="canvas">
+        <div id="drawing">
+          <canvas width="767" height="448" style="width: 767px; height: 448px"></canvas><canvas width="767" height="448" style="
+              position: absolute;
+              z-index: 1;
+              top: 0px;
+              left: 0px;
+              width: 767px;
+              height: 448px;
+            "></canvas>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<style>  
+  #screenRoom .content {
+    width: 810px;
+    height: 754px;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -moz-box;
+    display: -moz-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-direction: normal;
+    -webkit-box-orient: vertical;
+    -webkit-flex-direction: column;
+    -moz-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+  }
+
+  #screenRoom .ctt #canvas {
+    margin: 0 0 0 23px;
+    height: 458px;
+    position: relative;
+    grid-area: b;
+    background-color: #fff;
+    border: 1px solid #979797;
+    -webkit-border-radius: 12px;
+    -moz-border-radius: 12px;
+    -ms-border-radius: 12px;
+    -o-border-radius: 12px;
+    border-radius: 12px;
+    box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.5);
+  }
+</style>
