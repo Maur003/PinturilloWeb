@@ -1,5 +1,5 @@
 const canvas = document.getElementById("drawing");
-const toolbar = document.getElementById("tools");
+const toolbar = document.getElementById("toolbar");
 const ctx = canvas.getContext("2d");
 
 const canvasOffsetX = canvas.offsetLeft;
