@@ -112,6 +112,7 @@ import Interaction from '@/components/Board/Interaction.astro';
   -moz-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
+  max-height: 100%;
 }
 #screenRoom .ctt {
   -webkit-box-flex: 1;
@@ -130,4 +131,9 @@ import Interaction from '@/components/Board/Interaction.astro';
   -ms-grid-gap: 23px 25px;
   grid-template-areas: "a b" "a c";
 }
+#__next, .nextCenter, #content, #screenRoom, #screenRoom .content {
+  height: 100vh; /* Esto hará que estos elementos se ajusten a la altura del viewport */
+  overflow: hidden; /* Previene desbordamiento */
+}
+
 </style>
