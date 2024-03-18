@@ -8,13 +8,16 @@ const { titleBluebt, titleYellowbt } = Astro.props;
 ---
 
 <div class="actions">
-	<button class="btBlueBig ic-rooms">
-		<strong>{titleBluebt}</strong>
-  </button>
-
-  <button class="btYellowBig ic-playHome">
-		<strong>{titleYellowbt}</strong>
-	</button>
+  <a href="/tables">
+    <button class="btBlueBig ic-rooms">
+      <strong>{titleBluebt}</strong>
+    </button>
+  </a>
+  <a href="/board">
+    <button class="btYellowBig ic-playHome">
+      <strong>{titleYellowbt}</strong>
+    </button>
+  </a>
 </div>
 <style>
 

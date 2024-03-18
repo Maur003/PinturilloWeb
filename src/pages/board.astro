@@ -1,0 +1,488 @@
+---
+import Layout from '@/layouts/Layout.astro';
+import Users from '@/components/Board/Users.astro';
+import Header from '@/components/Board/Header.astro';
+---
+<Layout title="Board">
+  <div id="__next">
+    <div class="nextCenter">
+      <div id="content">
+        <div style="transform: scale(1.00336)">
+          <div id="screenRoom" class="common blur">
+            <div class="content">
+
+              <Header />
+              
+              <div class="ctt">
+
+                <Users />
+
+                <div id="canvas">
+                  <div id="drawing">
+                    <canvas width="767" height="448" style="width: 767px; height: 448px"></canvas><canvas width="767" height="448" style="
+                        position: absolute;
+                        z-index: 1;
+                        top: 0px;
+                        left: 0px;
+                        width: 767px;
+                        height: 448px;
+                      "></canvas>
+                  </div>
+                </div>
+
+                <div id="interaction">
+                  <div id="answer">
+                    <h5>RESPUESTAS</h5>
+                    <div class="history">
+                      <div class="scroll null">
+                        <div class="scrollElements"></div>
+                        <div class="scrollBar">
+                          <div class="scrollTrack" style="top: 0px"></div>
+                        </div>
+                      </div>
+                    </div>
+                    <form>
+                      <div class="textGame">
+                        <input type="text" name="answer" class="mousetrap" placeholder="Responde aquí..." autocomplete="off" autocorrect="off" autocapitalize="none" maxlength="100" disabled="" enterkeyhint="send" value="Esperando..."><span></span><label>tab<span class="tooltip"></span></label>
+                        <div class="lottieAns">
+                          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 353 41" width="353" height="41" style="
+                              width: 100%;
+                              height: 100%;
+                              transform: translate3d(0px, 0px, 0px);
+                            " preserveAspectRatio="xMidYMid meet">
+                            <defs>
+                              <clipPath id="__lottie_element_3">
+                                <rect width="353" height="41" x="0" y="0"></rect>
+                              </clipPath>
+                            </defs>
+                            <g clip-path="url(#__lottie_element_3)">
+                              <g style="display: none">
+                                <g>
+                                  <path></path>
+                                  <path stroke-linecap="butt" stroke-linejoin="miter" fill-opacity="0" stroke-miterlimit="4"></path>
+                                </g>
+                              </g>
+                              <g style="display: block" transform="matrix(1,0,0,1,176.5,21.5)" opacity="1">
+                                <g opacity="1" transform="matrix(1,0,0,1,-0.7879999876022339,-0.5609999895095825)">
+                                  <path stroke-linecap="butt" stroke-linejoin="miter" fill-opacity="0" stroke-miterlimit="4" stroke="rgb(116,205,118)" stroke-opacity="1" stroke-width="4" d="M0 0"></path>
+                                </g>
+                              </g>
+                              <g style="display: block" transform="matrix(0.800000011920929,0,0,0.800000011920929,349.20001220703125,-98.1500015258789)" opacity="1">
+                                <g opacity="1" transform="matrix(1,0,0,1,0,0)">
+                                  <path stroke-linecap="round" stroke-linejoin="miter" fill-opacity="0" stroke-miterlimit="4" stroke="rgb(255,255,255)" stroke-opacity="1" stroke-width="6" d="M0 0"></path>
+                                </g>
+                              </g>
+                            </g>
+                          </svg>
+                        </div>
+                      </div>
+                    </form>
+                  </div>
+
+                  <div class="bar"></div>
+
+                  <div id="chat" class="">
+                    <h5>CHAT</h5>
+                    <div class="history">
+                      <div class="scroll null">
+                        <div class="scrollElements"></div>
+                        <div class="scrollBar">
+                          <div class="scrollTrack" style="top: 0px"></div>
+                        </div>
+                      </div>
+                    </div>
+                    <form>
+                      <div class="textGame">
+                        <input type="text" name="chat" class="mousetrap" autocomplete="off" autocorrect="off" autocapitalize="none" placeholder="Chatea aquí..." maxlength="100" enterkeyhint="send" value=""><span></span><label><span class="tooltip"></span></label>
+                      </div>
+                    </form>
+                  </div>
+
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</Layout>
+
+<style>
+
+#__next {
+  -webkit-flex: 1 0 auto;
+  -moz-flex: 1 0 auto;
+  -ms-flex: 1 0 auto;
+  flex: 1 0 auto;
+  height: 100%;
+  margin: 0;
+  -webkit-box-orient: vertical;
+  -webkit-flex-direction: column;
+  -moz-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+#__next,
+.nextCenter {
+  -webkit-box-flex: 1;
+  -moz-box-flex: 1;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -moz-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-direction: normal;
+}
+.nextCenter {
+  -webkit-box-orient: horizontal;
+  -webkit-flex-direction: row;
+  -moz-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-flex: 1;
+  -moz-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  position: relative;
+}
+
+#content {
+  position: relative;
+  -webkit-flex: 1 0 auto;
+  -moz-flex: 1 0 auto;
+  -ms-flex: 1 0 auto;
+  flex: 1 0 auto;
+  -webkit-flex-direction: column;
+  -moz-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -ms-flex-pack: center;
+  -ms-flex-align: center;
+}
+#content,
+.screenSystem {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -moz-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex: 1;
+  -moz-box-flex: 1;
+  -webkit-box-direction: normal;
+  -webkit-box-orient: vertical;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -moz-justify-content: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -moz-align-items: center;
+  align-items: center;
+}
+
+input[type="text"] {
+  border: 2px solid #868d96;
+  font-family: NunitoBold;
+  font-size: 18px;
+  color: #797979;
+}
+
+input[type="text"]:placeholder-shown {
+  border-color: #868d96;
+}
+
+input[type="text"]:placeholder-shown + span {
+  color: #868d96;
+}
+
+input[type="text"]:focus {
+  color: #474747;
+  border-color: #001b4d;
+}
+
+input[type="text"]:focus + span {
+  color: #474747;
+}
+
+input[type="text"]:disabled {
+  border-color: #a9c8d3;
+  color: #a9c8d3;
+  -webkit-text-fill-color: #a9c8d3;
+  background-color: #fff;
+  opacity: 1;
+}
+
+input[type="text"]:disabled::placeholder {
+  color: #a9c8d3;
+}
+
+input[type="text"]:disabled + span {
+  color: #a9c8d3;
+}
+input[type="text"].error {
+  border-color: #f45531;
+}
+
+.textGame {
+  min-width: 150px;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  -moz-align-items: center;
+  align-items: center;
+  position: relative;
+}
+
+.textGame span:not(.tooltip) {
+  position: absolute;
+  width: 22px;
+  height: 20px;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -moz-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  -o-transform: translateY(-50%);
+  transform: translateY(-50%);
+  z-index: 3;
+  left: 10px;
+  color: #868d96;
+  text-align: center;
+}
+.textGame span:not(.tooltip):before {
+  content: "\E92F";
+  font-family: ico;
+  font-style: normal;
+  font-weight: 400;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  position: absolute;
+  font-size: 20px;
+}
+.textGame div {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 4;
+  display: none;
+  width: 100%;
+}
+
+.textGame input[type="text"] {
+  width: calc(100% - 80px);
+  height: 37px;
+  -webkit-border-radius: 7px;
+  -moz-border-radius: 7px;
+  -ms-border-radius: 7px;
+  -o-border-radius: 7px;
+  border-radius: 7px;
+  text-align: left;
+  padding: 0 40px;
+  font-size: 18px;
+  z-index: 2;
+}
+
+#screenRoom.blur .textGame label {
+  display: none;
+}
+#screenRoom .content {
+  width: 1150px;
+  height: 754px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -moz-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-direction: normal;
+  -webkit-box-orient: vertical;
+  -webkit-flex-direction: column;
+  -moz-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+
+#screenRoom .ctt {
+  -webkit-box-flex: 1;
+  -webkit-flex: 1;
+  -moz-box-flex: 1;
+  -moz-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  min-height: 0;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 340px 1fr;
+  grid-template-columns: 340px 1fr;
+  -ms-grid-rows: 458px 1fr;
+  grid-template-rows: 458px 1fr;
+  -ms-grid-gap: 23px 25px;
+  grid-template-areas: "a b" "a c";
+}
+#screenRoom .ctt .{
+  width: 340px;
+  height: 100%;
+  -webkit-box-direction: normal;
+  -webkit-box-orient: horizontal;
+  -webkit-flex-direction: row;
+  -moz-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  grid-area: a;
+  -ms-grid-row-span: 2;
+  overflow: hidden;
+}
+
+#screenRoom .ctt #canvas {
+  margin: 0 0 0 23px;
+  height: 458px;
+  position: relative;
+  grid-area: b;
+  background-color: #fff;
+  border: 1px solid #979797;
+  -webkit-border-radius: 12px;
+  -moz-border-radius: 12px;
+  -ms-border-radius: 12px;
+  -o-border-radius: 12px;
+  border-radius: 12px;
+  box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.5);
+}
+
+#screenRoom .ctt #interaction {
+  margin: 25px 0 0 23px;
+  grid-area: c;
+  min-height: 0;
+  min-width: 0;
+  position: relative;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -moz-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-direction: normal;
+  -webkit-box-orient: horizontal;
+  -webkit-flex-direction: row;
+  -moz-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  background-color: #fff;
+  border: 1px solid #979797;
+  -webkit-border-radius: 12px;
+  -moz-border-radius: 12px;
+  -ms-border-radius: 12px;
+  -o-border-radius: 12px;
+  border-radius: 12px;
+  box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.5);
+}
+
+#screenRoom .ctt #interaction #answer,
+#screenRoom .ctt #interaction #chat {
+  z-index: 3;
+  -webkit-box-flex: 1;
+  -webkit-flex: 1;
+  -moz-box-flex: 1;
+  -moz-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  min-height: 0;
+  min-width: 0;
+  position: relative;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -moz-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-direction: normal;
+  -webkit-box-orient: vertical;
+  -webkit-flex-direction: column;
+  -moz-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+#screenRoom .ctt #interaction #answer h5,
+#screenRoom .ctt #interaction #chat h5 {
+  min-width: 110px;
+  max-width: calc(100% - 30px);
+  padding: 0 7px;
+  height: 34px;
+  background-color: #0b2990;
+  -webkit-border-radius: 7px;
+  -moz-border-radius: 7px;
+  -ms-border-radius: 7px;
+  -o-border-radius: 7px;
+  border-radius: 7px;
+  position: absolute;
+  top: -14px;
+  right: 15px;
+  font-family: NunitoBlack;
+  font-size: 18px;
+  color: #fff;
+  text-align: center;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -moz-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  -moz-align-items: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  -moz-justify-content: center;
+  justify-content: center;
+  white-space: nowrap;
+  overflow: hidden;
+  text-transform: uppercase;
+}
+
+
+#screenRoom .ctt #interaction #answer .history,
+#screenRoom .ctt #interaction #chat .history {
+  margin: 17px 0 0;
+  -webkit-box-flex: 1;
+  -webkit-flex: 1;
+  -moz-box-flex: 1;
+  -moz-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -moz-flex;
+  display: -ms-flexbox;
+  display: flex;
+  min-height: 0;
+}
+#screenRoom .ctt #interaction #answer form,
+#screenRoom .ctt #interaction #chat form {
+  margin-bottom: 15px;
+  z-index: 11;
+}
+
+#screenRoom .ctt #interaction #chat {
+  margin: 0 20px 0 0;
+}
+
+#screenRoom .ctt #interaction #chat .textGame span:not(.tooltip):before {
+  content: "\E916";
+}
+
+#screenRoom .ctt #interaction .bar {
+  width: 1px;
+  background-color: rgba(120, 155, 176, 0.34);
+  position: relative;
+  z-index: 2;
+  margin: 15px 20px;
+}
+</style>

@@ -1,15 +1,12 @@
 ---
-import Layout from '@layouts/Layout.astro';
-import Buttons from '@components/Buttons.astro';
-import Header from '@components/Header.astro';
-import Footer from '@components/Footer.astro';
-import Title from '@components/Title.astro';
+import Layout from '@/layouts/Layout.astro';
+import Buttons from '@/components/Buttons.astro';
+import Header from '@/components/Header.astro';
+import Footer from '@/components/Footer.astro';
+import Title from '@/components/Title.astro';
 ---
 
 <Layout title="Pinturillo | Inicio">
-	<div id="background">
-  </div>
-  
     <div id="mainLayout">
       <div class="nextCenter">
         <div id="content">
@@ -36,7 +33,7 @@ import Title from '@components/Title.astro';
                         <div class="containerForm">
 
                           <div class="fieldset nick">
-                            <span>NICK:</span><label class="text"><input type="text" value="User2837" maxlength="18"></label>
+                            <span>NICK:</span><label class="text"><input type="text" value="User000" maxlength="18"></label>
                           </div>
                         </div>
                       </div>
@@ -346,30 +343,6 @@ textarea:focus {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-direction: normal;
-}
-
-#background {
-  position: fixed;
-  z-index: 0;
-  width: 100%;
-  height: 100%;
-  overflow: hidden;
-}
-#background:before {
-  background-image: url(/src/static/images/textura.png);
-  content: "";
-  width: 200%;
-  display: block;
-  position: absolute;
-  z-index: 0;
-  left: 50%;
-  top: 50%;
-  height: 200%;
-  -webkit-transform: translate(-50%, -50%) rotate(345deg);
-  -moz-transform: translate(-50%, -50%) rotate(345deg);
-  -ms-transform: translate(-50%, -50%) rotate(345deg);
-  -o-transform: translate(-50%, -50%) rotate(345deg);
-  transform: translate(-50%, -50%) rotate(345deg);
 }
 
 #content {
