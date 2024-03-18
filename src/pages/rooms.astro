@@ -2,6 +2,7 @@
 import Layout from '@/layouts/Layout.astro'
 import Header from '@/components/Header.astro'
 import Buttons from '@/components/Buttons.astro'
+import Title from '@/components/Title.astro'
 ---
 <Layout title="Gartic | Rooms">
   <div id="__next">
@@ -16,14 +17,13 @@ import Buttons from '@/components/Buttons.astro'
               <Header />
 
               <div>
-
                 <div class="title">
                   <div>
-                    <button class="back"></button>
-                    
+                    <a href="/">
+                      <button class="back"></button>
+                    </a>
                   </div>
-                  <span class="gTitle"><h2>MESAS</h2></span>
-                  
+                  <Title title="MESAS">
                   <div class="filter">
                   </div>
                 </div>
