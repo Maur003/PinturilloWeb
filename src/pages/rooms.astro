@@ -19,13 +19,25 @@ import Footer from '@/components/Footer.astro'
 
               <div>
                 <div class="title">
-                  <div>
+                  <div class="searcher">
                     <a href="/">
                       <button class="back"></button>
                     </a>
+                    <form action="/buscar" method="get" class="search-form">
+                      <div class="search-box">
+                          <i class="fa fa-search"></i>
+                          <input type="text" name="q" placeholder="buscar" />
+                      </div>
+                  </form>
                   </div>
-                  <Title title="MESAS">
+                  <div class="tittleP">
+                    <div class="gTitle">
+                      <h2>Mesas</h2>
+                    </div>
+                  </div>
+
                   <div class="filter">
+                    
                   </div>
                 </div>
                 
@@ -1027,4 +1039,59 @@ header:not(.game) .logo figure {
   font-family: NunitoBlack;
   letter-spacing: 1px;
 }
+.searcher {
+  display: flex; 
+  justify-content: center; 
+  align-items: center; 
+  width: 100%; 
+}
+
+.search-form {
+  margin: auto; 
+  display: flex;
+  align-items: center;
+  border: 3px solid #07070787;
+  padding: 5px;
+  border-radius: 8px;
+  width: 60%; 
+  height: 30%;
+  
+}
+.search-container {
+    display: flex;
+    justify-content: center; 
+    margin-top: 50px; 
+}
+.search-box {
+    display: flex;
+    align-items: center;
+    flex-grow: 1;
+}
+.search-box .fa-search {
+    margin-right: 10px;
+    color: black;
+}
+
+.search-box input[type="text"] {
+    border: none;
+    padding: 10px;
+    outline: none;
+    width: 100%;
+    border-radius: 8px; 
+}
+
+.search-form input[type="text"]:focus {
+    border-color: #4A90E2;
+}
+
+.search-box button {
+    display: none;
+    
+    font-size: 18px;
+    
+}
+.figure{
+    background-image: url(https://gartic.io/static/images/subjects/2.svg?v=1);
+}
+
 </style>
