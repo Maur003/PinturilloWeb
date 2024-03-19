@@ -1,13 +1,13 @@
 ---
 import Layout from "@/layouts/Layout.astro";
-import Header from "@/components/Board2/Header2.astro";
-import Users from "@/components/Board2/Users2.astro";
-import Canvas from "@/components/Board2/Canvas2.astro";
-import Interaction from "@/components/Board2/Interaction2.astro";
+import Users from "@/components/Board/Users.astro";
+import Header from "@/components/Board/Header.astro";
+import Canvas from "@/components/Board/Canvas.astro";
+import Interaction from "@/components/Board/Interaction.astro";
 import Tools from "@/components/Board2/Tools2.astro";
 ---
 
-<Layout title="Gartic | Board Player">
+<Layout title="Gartic | Board">
   <div id="__next">
     <div class="nextCenter">
       <div id="content">
@@ -17,15 +17,14 @@ import Tools from "@/components/Board2/Tools2.astro";
             <div class="ctt">
               <Users />
               <Canvas />
+
               <Interaction />
-              <Tools />
             </div>
           </div>
         </div>
       </div>
     </div>
   </div>
-
   <style>
     #__next {
       -webkit-flex: 1 0 auto;
@@ -64,7 +63,6 @@ import Tools from "@/components/Board2/Tools2.astro";
       flex: 1;
       position: relative;
     }
-
     #content {
       position: relative;
       -webkit-flex: 1 0 auto;
@@ -114,7 +112,9 @@ import Tools from "@/components/Board2/Tools2.astro";
       -moz-flex-direction: column;
       -ms-flex-direction: column;
       flex-direction: column;
+      max-height: 100%;
     }
+
     #screenRoom .ctt {
       -webkit-box-flex: 1;
       -webkit-flex: 1;
@@ -132,5 +132,13 @@ import Tools from "@/components/Board2/Tools2.astro";
       -ms-grid-gap: 23px 25px;
       grid-template-areas: "a b" "a c";
     }
-  </style>
-</Layout>
+    #__next,
+    .nextCenter,
+    #content,
+    #screenRoom,
+    #screenRoom .content {
+      height: 100vh; /* Esto hará que estos elementos se ajusten a la altura del viewport */
+      overflow: hidden; /* Previene desbordamiento */
+    }
+  </style></Layout
+>

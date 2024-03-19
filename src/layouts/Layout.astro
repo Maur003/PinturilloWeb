@@ -100,7 +100,23 @@ const { title } = Astro.props;
     padding: 0;
     border: none;
     font-family: Nunito;
-    color: #ffffff;
+    color: #fff;
+  }
+
+  body {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -moz-box;
+    display: -moz-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-direction: normal;
+    -webkit-box-orient: horizontal;
+    -webkit-flex-direction: row;
+    -moz-flex-direction: row;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    background-color: #0a5efb !important;
   }
 
   #background {

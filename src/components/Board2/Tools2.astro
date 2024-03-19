@@ -160,6 +160,44 @@
 </div>
 
 <style>
+  #screenRoom {  /*278*/
+    position: relative;
+    z-index: 2;
+    -webkit-box-flex: 1;
+    -webkit-flex: 1 0 auto;
+    -moz-box-flex: 1;
+    -moz-flex: 1 0 auto;
+    -ms-flex: 1 0 auto;
+    flex: 1 0 auto;
+    -webkit-align-self: stretch;
+    -moz-align-self: stretch;
+    -ms-flex-item-align: stretch;
+    align-self: stretch;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -moz-box;
+    display: -moz-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-direction: normal;
+    -webkit-box-orient: horizontal;
+    -webkit-flex-direction: row;
+    -moz-flex-direction: row;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+    -moz-align-items: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    -webkit-justify-content: center;
+    -moz-justify-content: center;
+    justify-content: center;
+    min-width: 860px;
+    min-height: 560px;
+  }
   #screenRoom .content {
     width: 1150px;
     height: 754px;
@@ -176,4 +214,601 @@
     -ms-flex-direction: column;
     flex-direction: column;
   }
+
+  #screenRoom .ctt {
+    -webkit-box-flex: 1;
+    -webkit-flex: 1;
+    -moz-box-flex: 1;
+    -moz-flex: 1;
+    -ms-flex: 1;
+    flex: 1;
+    min-height: 0;
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 340px 1fr;
+    grid-template-columns: 340px 1fr;
+    -ms-grid-rows: 458px 1fr;
+    grid-template-rows: 458px 1fr;
+    -ms-grid-gap: 23px 25px;
+    grid-template-areas:
+        "a b"
+        "a c";
+  }
+
+#screenRoom .ctt .users-tools {
+    width: 340px;
+    height: 100%;
+    -webkit-box-direction: normal;
+    -webkit-box-orient: horizontal;
+    -webkit-flex-direction: row;
+    -moz-flex-direction: row;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    grid-area: align-self: stretch;
+    -ms-grid-row: 1;
+    -ms-grid-column: 1;
+    -ms-grid-row-span: 2;
+    overflow: hidden;
+  }
+
+  #screenRoom .ctt .users-tools #tools, #screenRoom .ctt .users-tools #tools>div {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -moz-box;
+    display: -moz-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-direction: normal;
+    -webkit-box-orient: vertical;
+    -webkit-flex-direction: column;
+    -moz-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+  }
+  #screenRoom .ctt .users-tools #tools {
+    width: 140px;
+    background-color: #132d85;
+    border: 2px solid #006fff;
+    -webkit-border-radius: 12px;
+    -moz-border-radius: 12px;
+    -ms-border-radius: 12px;
+    -o-border-radius: 12px;
+    border-radius: 12px;
+    top: -82%;
+    bottom: 6s0%; /*Para mover todo lo de tools*/
+    right: 97.8%;
+    position: absolute;
+    z-index: 1;
+    -webkit-box-align: end;
+    -ms-flex-align: end;
+    -webkit-align-items: flex-end;
+    -moz-align-items: flex-end;
+    align-items: flex-end;
+  }
+
+  #screenRoom .ctt .users-tools #tools>div {
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+    -moz-align-items: center;
+    align-items: center;
+    -webkit-box-flex: 1;
+    -webkit-flex: 1;
+    -moz-box-flex: 1;
+    -moz-flex: 1;
+    -ms-flex: 1;
+    flex: 1;
+    width: 82px;
+    margin: 10px 25px;
+  }
+
+  #screenRoom .ctt .users-tools #tools ul, #screenRoom .ctt .users-tools #tools ul li {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -moz-box;
+    display: -moz-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-direction: normal;
+    -webkit-box-orient: horizontal;
+    -webkit-flex-direction: row;
+    -moz-flex-direction: row;
+    -ms-flex-direction: row;
+  }
+  #screenRoom .ctt .users-tools #tools ul {
+    flex-direction: row;
+    list-style-type: none;
+    -webkit-flex-wrap: wrap;
+    -moz-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -webkit-align-self: stretch;
+    -moz-align-self: stretch;
+    -ms-flex-item-align: stretch;
+    align-self: stretch;
+  }
+
+  #screenRoom .ctt .users-tools #tools ul li:nth-child(odd) {
+    border-right: 2px solid #006fff;
+  }
+
+  #screenRoom .ctt .users-tools #tools ul li {
+    width: 40px;
+    height: 60px;
+    cursor: pointer;
+    flex-direction: row;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+    -moz-align-items: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    -webkit-justify-content: center;
+    -moz-justify-content: center;
+    justify-content: center;
+    border-bottom: 2px solid #006fff;
+  }
+
+  #screenRoom .ctt .users-tools #tools ul li.active:before, #screenRoom .ctt .users-tools #tools ul li:active:before, #screenRoom .ctt .users-tools #tools ul li:hover:before {
+  color: #f8c034;
+  }
+  #screenRoom .ctt .users-tools #tools ul li#op0:before {
+    content: "\E930";
+    font-size: 26px;
+  }
+
+  #screenRoom .ctt .users-tools #tools ul li#op1:before {
+    content: "\E920";
+  }
+
+  #screenRoom .ctt .users-tools #tools ul li:nth-child(odd) {
+    border-right: 2px solid #006fff;
+  }
+
+  #screenRoom .ctt .users-tools #tools ul li#op2:before {
+    content: "\E938";
+    font-size: 24px;
+  }
+
+  #screenRoom .ctt .users-tools #tools ul li#op3:before {
+    content: "\E937";
+    font-size: 24px;
+  }
+
+  #screenRoom .ctt .users-tools #tools ul li#op4:before {
+    content: "\E924";
+    font-size: 26px;
+  }
+
+  #screenRoom .ctt .users-tools #tools ul li#op5:before {
+    content: "\E923";
+    font-size: 26px;
+  }
+
+  #screenRoom .ctt .users-tools #tools ul li#op6:before {
+    content: "\E931";
+  }
+
+  #screenRoom .ctt .users-tools #tools ul li#op7:before {
+    content: "\E91F";
+  }
+
+  #screenRoom .ctt .users-tools #tools ul li#op8:before {
+    content: "\E928";
+  }
+
+  #screenRoom .ctt .users-tools #tools ul li#clean:before {
+    content: "\E934";
+  }
+
+  #screenRoom .ctt .users-tools #tools ul li#undo:before {
+    content: "\E93D";
+  }
+
+  #screenRoom .ctt .users-tools #tools ul li#repeat:before {
+    content: "\E939";
+  }
+
+  #screenRoom .ctt .users-tools #tools ul li.inactive:before {
+    color: rgba(6, 140, 255, .5);
+  }
+
+  li {
+    display: list-item;
+    text-align: -webkit-match-parent;
+  }
+
+  ul {
+    display: block;
+    list-style-type: disc;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    padding inline-start: 40px;
+  }
+
+
+#screenRoom .ctt .users-tools #tools .colors,
+#screenRoom .ctt .users-tools #tools .colors>div {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -moz-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-direction: normal;
+}
+
+  #screenRoom .ctt .users-tools #tools ul li:before {
+    content: "0";
+    font-family: ico;
+    speak: none;
+    font-style: normal;
+    font-weight: 400;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    color: #068cff;
+    font-size: 28px;
+  }
+
+  #screenRoom .ctt .users-tools #tools .colors, #screenRoom .ctt .users-tools #tools .colors>div {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -moz-box;
+    display: -moz-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-direction: normal;
+  }
+  #screenRoom .ctt .users-tools #tools .colors {
+    -webkit-box-orient: vertical;
+    -webkit-flex-direction: column;
+    -moz-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    border-bottom: 2px solid #006fff;
+    -webkit-align-self: stretch;
+    -moz-align-self: stretch;
+    -ms-flex-item-align: stretch;
+    align-self: stretch;
+  }
+
+  #screenRoom .ctt .users-tools #tools .colors>div:first-of-type {
+    -webkit-flex-wrap: wrap;
+    -moz-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+  }
+  #screenRoom .ctt .users-tools #tools .colors>div {
+    -webkit-box-orient: horizontal;
+    -webkit-flex-direction: row;
+    -moz-flex-direction: row;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    -webkit-justify-content: center;
+    -moz-justify-content: center;
+    justify-content: center;
+    margin: 10px 0;
+  }
+
+  #screenRoom .ctt .users-tools #tools .colors .color:first-child {
+    background-color: #000;
+  }
+  #screenRoom .ctt .users-tools #tools .colors .color:nth-child(2) {
+    background-color: #666;
+  }
+
+  #screenRoom .ctt .users-tools #tools .colors .color:nth-child(3) {
+    background-color: #0017f6;
+  }
+
+  #screenRoom .ctt .users-tools #tools .colors .color:nth-child(4) {
+    background-color: #fff;
+  }
+
+  #screenRoom .ctt .users-tools #tools .colors .color:nth-child(5) {
+    background-color: #aaa;
+  }
+
+  #screenRoom .ctt .users-tools #tools .colors .color:nth-child(6) {
+    background-color: #26c9ff;
+  }
+
+  #screenRoom .ctt .users-tools #tools .colors .color:nth-child(7) {
+    background-color: #008d26;
+  }
+
+  #screenRoom .ctt .users-tools #tools .colors .color:nth-child(8) {
+    background-color: #a9230c;
+  }
+
+  #screenRoom .ctt .users-tools #tools .colors .color:nth-child(9) {
+    background-color: #964112;
+  }
+
+  #screenRoom .ctt .users-tools #tools .colors .color:nth-child(10) {
+    background-color: #00ff4d;
+  }
+
+  #screenRoom .ctt .users-tools #tools .colors .color:nth-child(11) {
+    background-color: #ff0013;
+  }
+
+  #screenRoom .ctt .users-tools #tools .colors .color:nth-child(12) {
+    background-color: #ff7829;
+  }
+
+  #screenRoom .ctt .users-tools #tools .colors .color:nth-child(13) {
+    background-color: #b0701c;
+  }
+
+  #screenRoom .ctt .users-tools #tools .colors .color:nth-child(14) {
+    background-color: #99004e;
+  }
+
+  #screenRoom .ctt .users-tools #tools .colors .color:nth-child(15) {
+    background-color: #936867;
+  }
+
+  #screenRoom .ctt .users-tools #tools .colors .color:nth-child(16) {
+    background-color: #ffc926;
+  }
+
+  #screenRoom .ctt .users-tools #tools .colors .color:nth-child(17) {
+    background-color: #ff008f;
+  }
+
+  #screenRoom .ctt .users-tools #tools .colors .color:nth-child(18) {
+    background-color: #feafa8;
+  }
+
+#screenRoom .ctt .users-tools #tools .colors .color:nth-child(19) {
+    background-color: #00d9a3;
+  }
+
+#screenRoom .ctt .users-tools #tools .colors .color:nth-child(20) {
+    background-color: #85b200;
+  }
+
+#screenRoom .ctt .users-tools #tools .colors .color:nth-child(21) {
+    background-color: #8000ff;
+  }
+
+#screenRoom .ctt .users-tools #tools .colors .color:nth-child(22) {
+    background-color: #052c6c;
+  }
+
+#screenRoom .ctt .users-tools #tools .colors .color:nth-child(23) {
+    background-color: #b973ff;
+  }
+
+#screenRoom .ctt .users-tools #tools .colors .color:nth-child(24) {
+    background-color: #fff73f;
+  }
+
+#screenRoom .ctt .users-tools #tools .colors .color:nth-child(19), #screenRoom .ctt .users-tools #tools .colors .color:nth-child(20), #screenRoom .ctt .users-tools #tools .colors .color:nth-child(21), #screenRoom .ctt .users-tools #tools .colors .color:nth-child(22), #screenRoom .ctt .users-tools #tools .colors .color:nth-child(23), #screenRoom .ctt .users-tools #tools .colors .color:nth-child(24) {
+    display: none;
+  }
+
+  #screenRoom .ctt .users-tools #tools .colors .color.active, #screenRoom .ctt .users-tools #tools .colors .color:active, #screenRoom .ctt .users-tools #tools .colors .color:hover {
+    box-shadow: 0 0 0 2px #f9c136;
+    border-color: #00356f;
+  }
+  #screenRoom .ctt .users-tools #tools .colors .color {
+    width: 20px;
+    height: 20px;
+    display: inline-block;
+    border: 2px solid #0a1e41;
+    margin: 2px 1px;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    -ms-border-radius: 3px;
+    -o-border-radius: 3px;
+    border-radius: 3px;
+    cursor: pointer;
+  }
+
+  #screenRoom .ctt .users-tools #tools .colors>div:nth-of-type(2) {
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+    -moz-align-items: center;
+    align-items: center;
+    margin: 0 0 10px;
+    -webkit-box-pack: space-around;
+    -ms-flex-pack: space-around;
+    -webkit-justify-content: space-around;
+    -moz-justify-content: space-around;
+    justify-content: space-around;
+  }
+
+  #screenRoom .ctt .users-tools #tools #colorSelected {
+    width: 29px;
+    height: 29px;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    -ms-border-radius: 3px;
+    -o-border-radius: 3px;
+    border-radius: 3px;
+    background-color: #000;
+    border: 2px solid #0b4db5;
+  }
+
+  #screenRoom .ctt .users-tools #tools #colorsRange {
+    width: 34px;
+    height: 34px;
+    border: none;
+    background: 0 0;
+    background-image: url();
+    background-repeat: no-repeat;
+    cursor: pointer;
+  }
+
+  #screenRoom .ctt .users-tools #tools #colorsRange #colorRangeInput {
+    width: 0;
+    height: 0;
+    visibility: hidden;
+  }
+
+  #screenRoom .ctt .users-tools .opacity-size {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -moz-box;
+    display: -moz-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-direction: normal;
+    -webkit-box-orient: horizontal;
+    -webkit-flex-direction: row;
+    -moz-flex-direction: row;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    margin: 18px 0 0;
+    position: relative;
+    width: 100%;
+    height: 152px;
+  }
+
+  #screenRoom .ctt .users-tools .opacity-size > div.size {
+    right: -17px;
+  }
+  #screenRoom .ctt .users-tools .opacity-size > div {
+    position: absolute;
+    height: 20px;
+    width: 152px;
+    -webkit-transform: rotate(-90deg);
+    -moz-transform: rotate(-90deg);
+    -ms-transform: rotate(-90deg);
+    -o-transform: rotate(-90deg);
+    transform: rotate(-90deg);
+    top: 65px;
+  }
+
+  #screenRoom .ctt .users-tools .opacity-size > div.size:before {
+    background-color: #fff;
+  }
+  #screenRoom .ctt .users-tools .opacity-size > div:after,
+  #screenRoom .ctt .users-tools .opacity-size > div:before {
+    content: "";
+    width: 16px;
+    height: 16px;
+    position: absolute;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+    border-radius: 50%;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    -moz-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    -o-transform: translateY(-50%);
+    transform: translateY(-50%);
+  }
+  #screenRoom .ctt .users-tools .opacity-size > div:before {
+    right: 0;
+  }
+
+  #screenRoom .ctt .users-tools .opacity-size input[type="range"] {
+    height: 3px;
+    -webkit-appearance: none;
+    width: 100px;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    -ms-border-radius: 3px;
+    -o-border-radius: 3px;
+    border-radius: 3px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+  }
+
+  #screenRoom .ctt .users-tools .opacity-size > div.size:after {
+    width: 7px;
+    height: 7px;
+    background-color: #fff;
+  }
+  #screenRoom .ctt .users-tools .opacity-size > div:after {
+    left: 0;
+  }
+  #screenRoom .ctt .users-tools .opacity-size > div:after,
+  #screenRoom .ctt .users-tools .opacity-size > div:before {
+    content: "";
+    width: 16px;
+    height: 16px;
+    position: absolute;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+    border-radius: 50%;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    -moz-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    -o-transform: translateY(-50%);
+    transform: translateY(-50%);
+  }
+
+  #screenRoom .ctt .users-tools .opacity-size > div.opacity {
+    left: -17px;
+  }
+  #screenRoom .ctt .users-tools .opacity-size > div {
+    position: absolute;
+    height: 20px;
+    width: 152px;
+    -webkit-transform: rotate(-90deg);
+    -moz-transform: rotate(-90deg);
+    -ms-transform: rotate(-90deg);
+    -o-transform: rotate(-90deg);
+    transform: rotate(-90deg);
+    top: 65px;
+  }
+
+  #screenRoom .ctt .users-tools .opacity-size > div.opacity:before {
+    background-color: #fff;
+    width: 13px;
+    height: 13px;
+  }
+  #screenRoom .ctt .users-tools .opacity-size > div:before {
+    right: 0;
+  }
+
+  #screenRoom .ctt .users-tools .opacity-size input[type="range"] {
+    height: 3px;
+    -webkit-appearance: none;
+    width: 100px;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    -ms-border-radius: 3px;
+    -o-border-radius: 3px;
+    border-radius: 3px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+  }
+
+  #screenRoom .ctt .users-tools .opacity-size > div.opacity:after {
+    width: 11px;
+    height: 11px;
+    border: 2px solid #fff;
+  }
+
 </style>
