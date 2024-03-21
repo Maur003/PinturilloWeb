@@ -2,18 +2,20 @@
 interface Props {
   titleBluebt: string;
   titleYellowbt: string;
+  refPageBlue: string;
+  refPageYellow: string;
 }
 
-const { titleBluebt, titleYellowbt } = Astro.props;
+const { titleBluebt, titleYellowbt, refPageBlue, refPageYellow } = Astro.props;
 ---
 
 <div class="actions">
-  <a href="/rooms">
+  <a href={refPageBlue}>
     <button class="btBlueBig ic-rooms">
       <strong>{titleBluebt}</strong>
     </button>
   </a>
-  <a href="/board2">
+  <a href={refPageYellow}>
     <button class="btYellowBig ic-playHome">
       <strong>{titleYellowbt}</strong>
     </button>
