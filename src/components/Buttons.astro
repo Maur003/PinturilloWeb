@@ -1,6 +1,6 @@
 ---
 interface Props {
-	titleBluebt: string,
+  titleBluebt: string;
   titleYellowbt: string;
 }
 
@@ -13,211 +13,212 @@ const { titleBluebt, titleYellowbt } = Astro.props;
       <strong>{titleBluebt}</strong>
     </button>
   </a>
-  <a href="/board">
+  <a href="/board2">
     <button class="btYellowBig ic-playHome">
       <strong>{titleYellowbt}</strong>
     </button>
   </a>
 </div>
 <style>
+  button {
+    background: 0 0;
+    border: none;
+    cursor: pointer;
+  }
 
-button {
-		background: 0 0;
-		border: none;
-		cursor: pointer;
-}
+  .actions {
+    height: 70px;
+    min-height: 70px;
+    margin: 10px 0 15px;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -moz-box;
+    display: -moz-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+    -moz-align-items: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    -webkit-justify-content: center;
+    -moz-justify-content: center;
+    justify-content: center;
+  }
 
-.actions {
-  height: 70px;
-  min-height: 70px;
-  margin: 10px 0 15px;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -moz-box;
-  display: -moz-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  -webkit-align-items: center;
-  -moz-align-items: center;
-  align-items: center;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  -moz-justify-content: center;
-  justify-content: center;
-}
+  .actions button {
+    margin: 0 10px;
+  }
 
-.actions button {
-  margin: 0 10px;
-}
+  .btBlueBig,
+  .btYellowBig {
+    width: 194px;
+    height: 42px;
+    -webkit-border-radius: 34px;
+    -moz-border-radius: 34px;
+    -ms-border-radius: 34px;
+    -o-border-radius: 34px;
+    border-radius: 34px;
+    border-top: 2px solid transparent;
+    border-bottom: 2px solid transparent;
+    box-shadow:
+      0 0 0 5px #002043,
+      0 0 0 6px #7c92b0;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -moz-box;
+    display: -moz-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-direction: normal;
+    -webkit-box-orient: horizontal;
+    -webkit-flex-direction: row;
+    -moz-flex-direction: row;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+    -moz-align-items: center;
+    align-items: center;
+    text-align: center;
+    position: relative;
+  }
+  .btBlueBig:before,
+  .btYellowBig:before {
+    margin: 0 10px 0 15px;
+  }
+  .btBlueBig strong,
+  .btYellowBig strong {
+    -webkit-box-flex: 1;
+    -webkit-flex: 1;
+    -moz-box-flex: 1;
+    -moz-flex: 1;
+    -ms-flex: 1;
+    flex: 1;
+    font-family: NunitoBlack;
+    font-size: 19px;
+    color: #001b4d;
+    letter-spacing: 0;
+    margin: 0 15px 0 0;
+    text-transform: uppercase;
+    word-break: break-word;
+  }
+  .btBlueBig span,
+  .btYellowBig span {
+    font-family: NunitoBold;
+    font-size: 14px;
+    color: #fff;
+    background-color: #042c70;
+    padding: 5px 10px;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    -ms-border-radius: 3px;
+    -o-border-radius: 3px;
+    border-radius: 3px;
+    white-space: nowrap;
+    top: -32px;
+    z-index: 6;
+    opacity: 0;
+    display: none;
+    z-index: 10;
+  }
+  .btBlueBig span,
+  .btBlueBig span:after,
+  .btYellowBig span,
+  .btYellowBig span:after {
+    position: absolute;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+    -moz-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    -o-transform: translateX(-50%);
+    transform: translateX(-50%);
+  }
+  .btBlueBig span:after,
+  .btYellowBig span:after {
+    bottom: -12px;
+    content: "";
+    border-color: #042c70 transparent transparent;
+    border-style: solid;
+    border-width: 15px 10px 0;
+    z-index: 5;
+  }
+  .btYellowBig {
+    background-color: #ffbf00;
+    border-top-color: #ffe100;
+    border-bottom-color: #f88700;
+  }
+  .btYellowBig:hover {
+    background-color: #ffcb00;
+    border-top-color: #ffef7c;
+    border-bottom-color: #f88700;
+  }
+  .btYellowBig:active {
+    border-top-width: 3px;
+    border-bottom-width: 1px;
+    background-color: #ffab00;
+    border-top-color: #ffab00;
+    border-bottom-color: #ffab00;
+  }
+  .btYellowBig:disabled {
+    cursor: auto;
+    background-color: #d8d6d3;
+    border-top-color: #f8f8f8;
+    border-bottom-color: #96928b;
+    overflow: visible;
+  }
+  .btYellowBig:disabled strong {
+    color: #87847f;
+  }
+  .btYellowBig:disabled:before {
+    -webkit-filter: grayscale(100%) opacity(0.5);
+    -moz-filter: grayscale(100%) opacity(0.5);
+    -ms-filter: grayscale(100%) opacity(0.5);
+    -o-filter: grayscale(100%) opacity(0.5);
+    filter: grayscale(100%) opacity(0.5);
+  }
+  .btYellowBig:disabled:hover span {
+    display: block;
+    opacity: 1;
+  }
+  .btBlueBig {
+    background-color: #13bafe;
+    border-top-color: #66cfff;
+    border-bottom-color: #248aed;
+  }
+  .btBlueBig:hover {
+    background-color: #3fc8ff;
+    border-top-color: #b1fdff;
+    border-bottom-color: #006ad0;
+  }
+  .btBlueBig:active {
+    border-top-width: 3px;
+    border-bottom-width: 1px;
+    background-color: #38bcf0;
+    border-top-color: #38bcf0;
+    border-bottom-color: #38bcf0;
+  }
 
-.btBlueBig,
-.btYellowBig {
-  width: 194px;
-  height: 42px;
-  -webkit-border-radius: 34px;
-  -moz-border-radius: 34px;
-  -ms-border-radius: 34px;
-  -o-border-radius: 34px;
-  border-radius: 34px;
-  border-top: 2px solid transparent;
-  border-bottom: 2px solid transparent;
-  box-shadow: 0 0 0 5px #002043, 0 0 0 6px #7c92b0;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -moz-box;
-  display: -moz-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-direction: normal;
-  -webkit-box-orient: horizontal;
-  -webkit-flex-direction: row;
-  -moz-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  -webkit-align-items: center;
-  -moz-align-items: center;
-  align-items: center;
-  text-align: center;
-  position: relative;
-}
-.btBlueBig:before,
-.btYellowBig:before {
-  margin: 0 10px 0 15px;
-}
-.btBlueBig strong,
-.btYellowBig strong {
-  -webkit-box-flex: 1;
-  -webkit-flex: 1;
-  -moz-box-flex: 1;
-  -moz-flex: 1;
-  -ms-flex: 1;
-  flex: 1;
-  font-family: NunitoBlack;
-  font-size: 19px;
-  color: #001b4d;
-  letter-spacing: 0;
-  margin: 0 15px 0 0;
-  text-transform: uppercase;
-  word-break: break-word;
-}
-.btBlueBig span,
-.btYellowBig span {
-  font-family: NunitoBold;
-  font-size: 14px;
-  color: #fff;
-  background-color: #042c70;
-  padding: 5px 10px;
-  -webkit-border-radius: 3px;
-  -moz-border-radius: 3px;
-  -ms-border-radius: 3px;
-  -o-border-radius: 3px;
-  border-radius: 3px;
-  white-space: nowrap;
-  top: -32px;
-  z-index: 6;
-  opacity: 0;
-  display: none;
-  z-index: 10;
-}
-.btBlueBig span,
-.btBlueBig span:after,
-.btYellowBig span,
-.btYellowBig span:after {
-  position: absolute;
-  left: 50%;
-  -webkit-transform: translateX(-50%);
-  -moz-transform: translateX(-50%);
-  -ms-transform: translateX(-50%);
-  -o-transform: translateX(-50%);
-  transform: translateX(-50%);
-}
-.btBlueBig span:after,
-.btYellowBig span:after {
-  bottom: -12px;
-  content: "";
-  border-color: #042c70 transparent transparent;
-  border-style: solid;
-  border-width: 15px 10px 0;
-  z-index: 5;
-}
-.btYellowBig {
-  background-color: #ffbf00;
-  border-top-color: #ffe100;
-  border-bottom-color: #f88700;
-}
-.btYellowBig:hover {
-  background-color: #ffcb00;
-  border-top-color: #ffef7c;
-  border-bottom-color: #f88700;
-}
-.btYellowBig:active {
-  border-top-width: 3px;
-  border-bottom-width: 1px;
-  background-color: #ffab00;
-  border-top-color: #ffab00;
-  border-bottom-color: #ffab00;
-}
-.btYellowBig:disabled {
-  cursor: auto;
-  background-color: #d8d6d3;
-  border-top-color: #f8f8f8;
-  border-bottom-color: #96928b;
-  overflow: visible;
-}
-.btYellowBig:disabled strong {
-  color: #87847f;
-}
-.btYellowBig:disabled:before {
-  -webkit-filter: grayscale(100%) opacity(0.5);
-  -moz-filter: grayscale(100%) opacity(0.5);
-  -ms-filter: grayscale(100%) opacity(0.5);
-  -o-filter: grayscale(100%) opacity(0.5);
-  filter: grayscale(100%) opacity(0.5);
-}
-.btYellowBig:disabled:hover span {
-  display: block;
-  opacity: 1;
-}
-.btBlueBig {
-  background-color: #13bafe;
-  border-top-color: #66cfff;
-  border-bottom-color: #248aed;
-}
-.btBlueBig:hover {
-  background-color: #3fc8ff;
-  border-top-color: #b1fdff;
-  border-bottom-color: #006ad0;
-}
-.btBlueBig:active {
-  border-top-width: 3px;
-  border-bottom-width: 1px;
-  background-color: #38bcf0;
-  border-top-color: #38bcf0;
-  border-bottom-color: #38bcf0;
-}
+  .ic-playHome:before,
+  .ic-rooms:before {
+    content: "";
+    background-repeat: no-repeat;
+    background-position: 50%;
+    background-size: contain;
+  }
 
-.ic-playHome:before,
-.ic-rooms:before {
-  content: "";
-  background-repeat: no-repeat;
-  background-position: 50%;
-  background-size: contain;
-}
+  .ic-playHome:before {
+    width: 34px;
+    height: 25px;
+    background-image: url(/src/static/images/ic_Play.svg);
+  }
 
-.ic-playHome:before {
-  width: 34px;
-  height: 25px;
-  background-image: url(/src/static/images/ic_Play.svg);
-}
-
-.ic-rooms:before {
-  width: 25px;
-  height: 31px;
-  background-image: url(/src/static/images/ic_Rooms.svg);
-}
+  .ic-rooms:before {
+    width: 25px;
+    height: 31px;
+    background-image: url(/src/static/images/ic_Rooms.svg);
+  }
 </style>
