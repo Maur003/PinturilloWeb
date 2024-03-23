@@ -1,0 +1,7 @@
+<img src="https://gartic.io/static/images/subjects/2.svg?v=1" alt="Icono de perro">
+img {
+  width: 48px;
+  height: 48px;
+  display: block;
+  margin: 0 auto;
+}
